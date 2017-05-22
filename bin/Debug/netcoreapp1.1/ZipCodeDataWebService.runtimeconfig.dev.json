@@ -1,0 +1,7 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/taser/.nuget/packages"
+    ]
+  }
+}

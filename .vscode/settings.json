@@ -1,0 +1,4 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "csharp.fallbackDebuggerLinuxRuntimeId": "ubuntu.16.10-x64"
+}

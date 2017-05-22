@@ -1,0 +1,8 @@
+/home/taser/Projects/dotnet/ZipCodeDataWebService/bin/Debug/netcoreapp1.1/ZipCodeDataWebService.deps.json
+/home/taser/Projects/dotnet/ZipCodeDataWebService/bin/Debug/netcoreapp1.1/ZipCodeDataWebService.runtimeconfig.json
+/home/taser/Projects/dotnet/ZipCodeDataWebService/bin/Debug/netcoreapp1.1/ZipCodeDataWebService.runtimeconfig.dev.json
+/home/taser/Projects/dotnet/ZipCodeDataWebService/bin/Debug/netcoreapp1.1/ZipCodeDataWebService.dll
+/home/taser/Projects/dotnet/ZipCodeDataWebService/bin/Debug/netcoreapp1.1/ZipCodeDataWebService.pdb
+/home/taser/Projects/dotnet/ZipCodeDataWebService/obj/Debug/netcoreapp1.1/ZipCodeDataWebService.AssemblyInfo.cs
+/home/taser/Projects/dotnet/ZipCodeDataWebService/obj/Debug/netcoreapp1.1/ZipCodeDataWebService.dll
+/home/taser/Projects/dotnet/ZipCodeDataWebService/obj/Debug/netcoreapp1.1/ZipCodeDataWebService.pdb
