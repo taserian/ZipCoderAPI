@@ -24,7 +24,6 @@ namespace ZipCoderAPI.Modules
 
         public string LocateState(string zipCode) {
             try {
-                zipCode = zipCode.PadLeft(5, '0');
                 int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
                 string stateName = "[UNKNOWN]";
                 foreach (var state in StateIntervals) {

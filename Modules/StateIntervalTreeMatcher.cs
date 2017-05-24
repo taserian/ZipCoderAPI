@@ -31,7 +31,6 @@ namespace ZipCoderAPI.Modules
         }
 
         public string LocateState(string zipCode) {
-            zipCode = zipCode.PadLeft(5, '0');
             int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
             List<StateData> states = intervalTree.Query(zipCodePrefix);
             if (states.Count != 1) {

@@ -27,7 +27,7 @@ namespace ZipCoderAPI.Data
             onePerson.id = Convert.ToInt32(values[0]);
             onePerson.firstName = values[1].Trim('\"');
             onePerson.lastName = values[2].Trim('\"');
-            onePerson.postalCode = values[3].Trim('\"');
+            onePerson.postalCode = values[3].Trim('\"').PadLeft(5, '0');
             onePerson.updateState(stateMatcher);
 
             return onePerson;

@@ -22,7 +22,7 @@ namespace ZipCoderAPI.Data
                         id = Convert.ToInt32(x.Element("id").Value),
                         firstName = x.Element("first_name").Value,
                         lastName = x.Element("last_name").Value,
-                        postalCode = x.Element("postal_code").Value
+                        postalCode = x.Element("postal_code").Value.PadLeft(5, '0')
                     }).ToList();
             foreach (var person in persons) {
                 person.updateState(stateMatcher);
