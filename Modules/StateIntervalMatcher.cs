@@ -24,15 +24,19 @@ namespace ZipCoderAPI.Modules
 
         public string LocateState(string zipCode) {
             try {
-                int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
-                string stateName = "[UNKNOWN]";
-                foreach (var state in StateIntervals) {
-                    if (zipCodePrefix >= state.start && zipCodePrefix <= state.end) {
-                        stateName = state.stateName;
-                        break;
-                    }   
-                };
-                return stateName;
+                if (zipCode.Length != 5) {
+                    return "[UNKNOWN]";
+                } else {
+                    int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
+                    string stateName = "[UNKNOWN]";
+                    foreach (var state in StateIntervals) {
+                        if (zipCodePrefix >= state.start && zipCodePrefix <= state.end) {
+                            stateName = state.stateName;
+                            break;
+                        }   
+                    };
+                    return stateName;
+                }
             } catch (Exception e) {
                 Console.WriteLine(e.Message);
                 return "[UNKNOWN]";

@@ -31,12 +31,21 @@ namespace ZipCoderAPI.Modules
         }
 
         public string LocateState(string zipCode) {
-            int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
-            List<StateData> states = intervalTree.Query(zipCodePrefix);
-            if (states.Count != 1) {
+            try {
+                if (zipCode.Length != 5) {
+                    return "[UNKNOWN]";
+                } else {
+                    int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
+                    List<StateData> states = intervalTree.Query(zipCodePrefix);
+                    if (states.Count != 1) {
+                        return "[UNKNOWN]";
+                    } else {
+                        return states[0].stateName;
+                    }
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
                 return "[UNKNOWN]";
-            } else {
-                return states[0].stateName;
             }
         }
     }

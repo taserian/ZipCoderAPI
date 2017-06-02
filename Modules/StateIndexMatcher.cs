@@ -28,11 +28,20 @@ namespace ZipCoderAPI.Modules
         }
 
         public string LocateState(string zipCode) {
-            int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
-            string stateName = "";
-            if (stateDictionary.TryGetValue(zipCodePrefix, out stateName)) {
-                return stateDictionary[zipCodePrefix];
-            } else {
+            try {
+                if (zipCode.Length != 5) {
+                    return "[UNKNOWN]";
+                } else {
+                    int zipCodePrefix = Convert.ToInt32(zipCode.Substring(0, 3));
+                    string stateName = "";
+                    if (stateDictionary.TryGetValue(zipCodePrefix, out stateName)) {
+                        return stateDictionary[zipCodePrefix];
+                    } else {
+                        return "[UNKNOWN]";
+                    }
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
                 return "[UNKNOWN]";
             }
         }
